@@ -18,7 +18,8 @@ public class CalculationsThread implements Runnable{
             try {
                 int value = input.take();
                 boolean isPrime = true;
-                for(int i = 2; i <= Math.sqrt(value); i++){
+                Thread.sleep(10*value);
+                for(int i = 2; i < value; i++){
                     if( (value % i) == 0){
                         isPrime = false;
                         break;
