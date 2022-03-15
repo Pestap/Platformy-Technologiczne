@@ -2,13 +2,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class OutputThread implements Runnable{
-    private Numbers numbers;
+    private Output result;
     /**
      *
-     * @param toTake - obiket klasy Numbers - zasób współdzielony z którego pobieramy wyniki obliczeń
+     * @param result - obiket klasy Numbers - zasób współdzielony z którego pobieramy wyniki obliczeń
      */
-    public OutputThread(Numbers toTake){
-        this.numbers = toTake;
+    public OutputThread(Output result){
+        this.result = result;
     }
 
     @Override
@@ -17,12 +17,12 @@ public class OutputThread implements Runnable{
      */
     public void run(){
         while(true) {
-            try {
-                System.out.println(numbers.take());
-            } catch (InterruptedException e) {
-                System.out.println("OUTPUT FINISHED");
-                break;
-            }
+            //try {
+                System.out.println();
+            //} catch (InterruptedException e) {
+              //  System.out.println("OUTPUT FINISHED");
+                //break;
+            //}
         }
     }
 }

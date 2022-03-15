@@ -10,7 +10,7 @@ public class Main {
         /**
          * maksymalna libcza wątków (semafor)
          */
-        int numberOfCalculationThreads = 10;
+        int numberOfCalculationThreads = 5;
         if(args.length > 0) {
             numberOfCalculationThreads = Integer.valueOf(args[0]);
         }
@@ -18,8 +18,8 @@ public class Main {
         /**
          * synchrozniowana lista liczb do sprawdzenia
          */
-        Numbers toTake = new Numbers();
-        Numbers result = new Numbers();
+        Input jobs = new Input();
+        Output out = new Output();
         /**
          *  inicjalizacja obiektu Scanner
          */
@@ -29,29 +29,32 @@ public class Main {
          * rozpoczęcie nowego wątku odpowiedzialnego za dodawanie nowych liczb
          */
 
-        Thread inputThread = new Thread(new InputThread(input, toTake));
-        Thread outputThread = new Thread(new OutputThread(result));
+
+        jobs.put(0, Integer.valueOf(1));
+        jobs.put(1, 10);
+
+        Thread inputThread = new Thread(new InputThread(input, jobs, 2));
+
 
         List<Thread> threadList = new ArrayList<>();
-        for(int i =0; i < numberOfCalculationThreads;i++){
-            threadList.add(new Thread(new CalculationsThread(toTake, result)));
+
+        for(int i =0 ; i< numberOfCalculationThreads ; i++){
+            threadList.add(new Thread((new CalculationsThread(jobs, out))));
         }
 
         inputThread.start();
-        outputThread.start();
+
         for(Thread t : threadList){
             t.start();
         }
-
         try {
             inputThread.join();
-            outputThread.join();
             for(Thread t : threadList){
                 t.join();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+        out.printALlResults();
     }
 }
