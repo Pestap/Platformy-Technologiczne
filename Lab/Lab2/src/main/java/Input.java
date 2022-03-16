@@ -33,7 +33,7 @@ public class Input {
         finished = true;
         notifyAll();
     }
-    public boolean getFinished(){
+    public synchronized boolean getFinished(){
         return finished;
     }
     public boolean isEmpty(){
