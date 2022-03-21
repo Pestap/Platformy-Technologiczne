@@ -1,48 +1,40 @@
-import java.io.BufferedOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class ServerMain {
 
     public static void main(String[] args){
-        try(ServerSocket server = new ServerSocket(9797)){
-            try(Socket socket = server.accept()){
-                ObjectOutputStream os = new ObjectOutputStream(socket.getOutputStream());
-                ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
 
-                ArrayList<Message> msgs = new ArrayList<>();
-                os.writeObject("ready");
-
-                int numberOfMessages = 0;
-                boolean countSend = false;
-                int temp;
-                while((temp = is.read()) != -1) {
-                    if(temp != -1){
-                        numberOfMessages = temp;
+        try {
+            ServerSocket serverSocket = new ServerSocket(9797);
+            int counter =0;
+            ArrayList<Thread> threads = new ArrayList<>();
+            while(true){
+                counter++;
+                Socket newThreadSocket = serverSocket.accept();
+                System.out.println(">> client " + counter + " connected");
+                Thread serverThread = new Thread(new ServerThread(newThreadSocket, counter));
+                serverThread.start();
+                threads.add(serverThread);
+                boolean isAnyAlive = false;
+                for(Thread t : threads){
+                    if(t.isAlive()){
+                        isAnyAlive = true;
+                        break;
                     }
                 }
-
-                System.out.println("Liczba wiadomości: " + numberOfMessages);
-
-                for(int i =0; i < numberOfMessages; i++){
-                    Message msg = (Message) is.readObject();
-                    msgs.add(msg);
+                if(!isAnyAlive){
+                    break;
                 }
-                System.out.println(msgs);
-                Thread.sleep(1000);
-                os.writeObject("finished");
             }
-        } catch (IOException | ClassNotFoundException | InterruptedException e) {
-            e.printStackTrace();
-        }finally{
+            System.out.println("WTF");
 
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
     }
 }
