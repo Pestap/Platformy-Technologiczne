@@ -31,6 +31,7 @@ public class ServerThread implements Runnable {
 
             System.out.println(">> client "+clientNumber +" - Liczba wiadmości: "+ numberOfMessages);
 
+
             for(int i =0 ; i < numberOfMessages; i++){
                 Message msg = (Message)in.readObject();
                 messages.add(msg);

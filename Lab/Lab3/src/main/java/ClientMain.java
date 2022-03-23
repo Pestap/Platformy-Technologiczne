@@ -25,6 +25,11 @@ public class ClientMain {
                 int numberOfMessages = Integer.valueOf(input.nextLine());
                 out.writeInt(numberOfMessages);
                 out.flush();
+
+
+
+
+
                 System.out.println("Podaj " + numberOfMessages + " wiadomości");
 
                 for(int i =0; i < numberOfMessages; i++){

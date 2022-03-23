@@ -11,7 +11,7 @@ public class ServerMain {
             ServerSocket serverSocket = new ServerSocket(9797);
             int counter =0;
             ArrayList<Thread> threads = new ArrayList<>();
-            while(true){
+            while(true) {
                 counter++;
                 Socket newThreadSocket = serverSocket.accept();
                 System.out.println(">> client " + counter + " connected");
@@ -19,17 +19,16 @@ public class ServerMain {
                 serverThread.start();
                 threads.add(serverThread);
                 boolean isAnyAlive = false;
-                for(Thread t : threads){
-                    if(t.isAlive()){
+                for (Thread t : threads) {
+                    if (t.isAlive()) {
                         isAnyAlive = true;
                         break;
                     }
                 }
-                if(!isAnyAlive){
+                if (!isAnyAlive) {
                     break;
                 }
             }
-            System.out.println("WTF");
 
 
         } catch (IOException e) {
