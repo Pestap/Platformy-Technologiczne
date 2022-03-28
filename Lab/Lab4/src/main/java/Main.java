@@ -29,6 +29,7 @@ public class Main {
         session.save(test4);
         session.save(testTower);
         session.getTransaction().commit();
+
         Scanner scan = new Scanner(System.in);
 
         while(true){
@@ -42,7 +43,7 @@ public class Main {
             }else if(cmd.toLowerCase().equals("add")){
                 System.out.println("Tower czy Mage?");
                 String tOrM = scan.nextLine();
-                if(tOrM.equals("Tower")){
+                if(tOrM.toLowerCase().equals("tower")){
                     System.out.println("Podaj nazwę:");
                     String name = scan.nextLine();
                     System.out.println("Podaj wysokość:");
@@ -60,6 +61,7 @@ public class Main {
 
                             if(resultMage.isEmpty()){
                                 System.out.println("Nie ma więcej magów do dodania.");
+                                session.getTransaction().commit();
                                 break;
                             }
                             for(int i =0; i < resultMage.size(); i++){
@@ -92,7 +94,7 @@ public class Main {
 
 
 
-                }else if(tOrM.equals("Mage")){
+                }else if(tOrM.toLowerCase().equals("mage")){
                     System.out.println("Podaj imię: ");
                     String name = scan.nextLine();
                     System.out.println("Podaj poziom: ");
@@ -145,10 +147,12 @@ public class Main {
                     String name = scan.nextLine();
 
                     session.beginTransaction();
-                    Mage  toDelete = session.find(Mage.class, name);
+                    Mage toDelete = session.find(Mage.class, name);
 
-                    Tower toUpdate = session.find(Tower.class, toDelete.getTower().getName());
-                    toUpdate.removeMage(toDelete);
+                    if(toDelete.getTower() != null) {
+                        Tower toUpdate = session.find(Tower.class, toDelete.getTower().getName());
+                        toUpdate.removeMage(toDelete);
+                    }
 
                     session.delete(toDelete);
                     session.getTransaction().commit();

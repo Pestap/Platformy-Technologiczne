@@ -40,10 +40,14 @@ public class Tower
     }
     @Override
     public String toString() {
-        return "Tower{" +
+        String result = "Tower{" +
                 "name='" + name + '\'' +
                 ", height=" + height +
-                "', liczba magów='"+mages.size() +'}';
+                "}, mages:\n";
+        for(Mage m : mages){
+            result += "\t"+ m.toString() + "\n";
+        }
+        return result;
     }
 
     public String getName() {
