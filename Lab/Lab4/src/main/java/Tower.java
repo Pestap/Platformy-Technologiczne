@@ -16,8 +16,7 @@ public class Tower
     @Column(name="height")
     private int height;
 
-    @OneToMany
-    @Column(name="mages")
+    @OneToMany(mappedBy="name")
     private List<Mage> mages;
 
     public Tower(){
@@ -36,12 +35,15 @@ public class Tower
         mages.add(mage);
     }
 
+    public void removeMage(Mage mage){
+        mages.remove(mage);
+    }
     @Override
     public String toString() {
         return "Tower{" +
                 "name='" + name + '\'' +
                 ", height=" + height +
-                '}';
+                "', liczba magów='"+mages.size() +'}';
     }
 
     public String getName() {

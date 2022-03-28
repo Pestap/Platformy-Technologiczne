@@ -52,10 +52,14 @@ public class Mage {
 
     @Override
     public String toString() {
-        return "Mage{" +
-                "name='" + name + '\'' +
-                ", level=" + level +
-                ", tower=" + tower.getName() +
-                '}';
+
+        String result = "Mage{'name='" + name + ", level="+level;
+
+        if (tower == null){
+            result += "}";
+        }else{
+            result += ", tower='"+tower.getName()+"'}";
+        }
+        return result;
     }
 }
