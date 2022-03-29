@@ -13,13 +13,16 @@ public class Main {
         /*
         Dane testowe
          */
-        Tower testTower = new Tower("TOWER", 10);
-        Mage test1 = new Mage("T1", 1, testTower);
+        Tower testTower = new Tower("Tower1", 10);
+        Mage test1 = new Mage("T1", 10, testTower);
         testTower.addMage(test1);
-        Mage test2 = new Mage("T2", 10, testTower);
+        Mage test2 = new Mage("T2", 3, testTower);
         testTower.addMage(test2);
-        Mage test3 = new Mage("T3", 4, null);
-        Mage test4 = new Mage("T4", 5, null);
+        Tower tower2 = new Tower("Tower2", 15);
+        Mage test3 = new Mage("T3", 2, tower2);
+        tower2.addMage(test3);
+        Mage test4 = new Mage("T4", 6, tower2);
+        tower2.addMage(test4);
 
 
         session.beginTransaction();
@@ -28,6 +31,7 @@ public class Main {
         session.save(test3);
         session.save(test4);
         session.save(testTower);
+        session.save(tower2);
         session.getTransaction().commit();
 
         Scanner scan = new Scanner(System.in);
@@ -83,12 +87,17 @@ public class Main {
                                 session.getTransaction().commit();
 
                             }else{
+                                session.saveOrUpdate(tower);
                                 session.getTransaction().commit();
                                 break;
                             }
 
                         }
 
+                    }else{
+                        session.beginTransaction();
+                        session.save(tower);
+                        session.getTransaction().commit();
                     }
 
 
@@ -99,8 +108,30 @@ public class Main {
                     String name = scan.nextLine();
                     System.out.println("Podaj poziom: ");
                     int lvl = Integer.valueOf(scan.nextLine());
-                    Mage newMage = new Mage(name,lvl, null);
+                    System.out.println("Czy chcesz przypisac maga do wieży?");
+                    Tower towerToAdd = null;
+                    String answer = scan.nextLine();
 
+
+                    if(answer.toLowerCase().equals("tak")){
+
+                        Query queryTower = session.createQuery("FROM Tower");
+                        List resultTower = queryTower.getResultList();
+
+                        for(int i =0; i < resultTower.size(); i++){
+                            System.out.println(i + ": " + resultTower.get(i));
+                        }
+                        int mageTower = Integer.valueOf(scan.nextLine());
+                        towerToAdd = (Tower)resultTower.get(mageTower);
+
+
+                    }
+
+
+                    Mage newMage = new Mage(name,lvl, towerToAdd);
+                    if(towerToAdd != null){
+                        towerToAdd.addMage(newMage);
+                    }
                     session.beginTransaction();
                     session.save(newMage);
                     session.getTransaction().commit();
@@ -160,8 +191,15 @@ public class Main {
                     System.out.println("Niezrozumiała odpowiedź. Spróbuj ponownie.");
                 }
             }else if(cmd.toLowerCase().equals("sql")) {
-                System.out.println("Podaj zapytanie w języku SQL: ");
-                String sql = scan.nextLine();
+                //get min
+                int minLevel = testTower.getMages().get(0).getLevel();
+                for(Mage m : testTower.getMages()){
+                    if(m.getLevel() < minLevel){
+                        minLevel = m.getLevel();
+                    }
+                }
+                System.out.println(minLevel);
+                String sql = "FROM Mage WHERE tower = 'Tower2' AND level > " + minLevel;
                 Query query = session.createQuery(sql);
                 // getResultList tylko dla SELECT (nie dla DELETE I UPDATE)
                 List result = query.getResultList();
