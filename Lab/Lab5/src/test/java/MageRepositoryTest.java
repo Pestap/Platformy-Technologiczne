@@ -8,7 +8,6 @@ public class MageRepositoryTest {
     MageRepository repository = null;
     @Before
     public void init(){
-
         repository = new MageRepository();
         repository.save(new Mage("Mage1", 10));
         repository.save(new Mage("Mage2", 15));
@@ -38,13 +37,13 @@ public class MageRepositoryTest {
 
     @Test
     public void findNonExistentTest(){
-        Optional<Mage> result = repository.find("Non=exsistent");
+        Optional<Mage> result = repository.find("Non-exsistent");
         assertTrue(result.isEmpty());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void deleteNonExistentTest(){
-        repository.delete("Non-existant");
+        repository.delete("Non-existent");
     }
 
     @Test(expected = Test.None.class)

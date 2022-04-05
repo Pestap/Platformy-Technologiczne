@@ -3,19 +3,29 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 
+import java.util.Optional;
+
 import static org.junit.Assert.*;
 
 public class MageControllerTest {
     MageController controller = null;
+    MageRepository repository = null;
     @Before
     public void init() {
-        controller = Mockito.mock(MageController.class);
-        Mockito.when(controller.delete("Gandalf")).thenReturn("Done");
-        Mockito.when(controller.delete("Non-existent")).thenReturn("Not found");
-        Mockito.when(controller.find("Non-existent")).thenReturn("Not found");
-        Mockito.when(controller.find("Merlin")).thenReturn((new Mage("Merlin", 10)).toString());
-        Mockito.when(controller.save("Merlin", 10)).thenReturn("Done");
-        Mockito.when(controller.save("Existent", 10)).thenReturn("Bad request");
+
+        repository = Mockito.mock(MageRepository.class);
+
+        Mockito.when(repository.find("Non-existent")).thenReturn(Optional.empty());
+        Mockito.when(repository.find("Existent")).thenReturn(Optional.of(new Mage("Existent", 10)));
+
+        Mockito.doThrow(new IllegalArgumentException()).when(repository).save(new Mage("Existent", 10));
+        Mockito.doNothing().when(repository).save(new Mage("Non-existent", 10));
+
+        Mockito.doThrow(new IllegalArgumentException()).when(repository).delete("Non-existent");
+        Mockito.doNothing().when(repository).delete("Existent");
+
+        controller = new MageController(repository);
+
     }
 
     @Test
@@ -26,7 +36,7 @@ public class MageControllerTest {
 
     @Test
     public void deleteExistentTest(){
-        String result = controller.delete("Gandalf");
+        String result = controller.delete("Exitent");
         assertEquals(result, "Done");
     }
 
@@ -38,13 +48,13 @@ public class MageControllerTest {
 
     @Test
     public void findExistentTest(){
-        String result = controller.find("Merlin");
-        assertEquals(result, (new Mage("Merlin", 10).toString()));
+        String result = controller.find("Existent");
+        assertEquals(result, (new Mage("Existent", 10).toString()));
     }
 
     @Test
     public void saveNonExistentTest(){
-        String result = controller.save("Merlin", 10);
+        String result = controller.save("Non-existent", 10);
         assertEquals(result, "Done");
     }
 
