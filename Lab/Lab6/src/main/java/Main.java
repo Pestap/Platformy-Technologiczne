@@ -33,33 +33,10 @@ public class Main {
         }
 
 
-        Stream<Path> pathStream = files.stream();
-
-        Stream<Pair<String, BufferedImage>> imageStream = pathStream.map(path ->{
-            String name = path.getFileName().toString();
-            BufferedImage img = null;
-            try {
-                img = ImageIO.read(path.toFile());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Pair<String, BufferedImage> pair = Pair.of(name,img);
-            return pair;
-        });
-
-        imageStream.forEach(pair ->{
-            String name = pair.getLeft();
-            BufferedImage img = pair.getRight();
-
-            transformImage(img);
-
-            File output = new File("Output\\"+name);
-            try {
-                ImageIO.write(img, "jpg", output);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+        files.stream()
+                .map(path -> readImage(path))
+                .map(pair -> transformImage(pair))
+                .forEach(pair -> saveImage(pair, "Output"));
 
         long timeElapsed = System.currentTimeMillis() - time;
 
@@ -74,40 +51,22 @@ public class Main {
 
         List<Path> filesParallel = null;
         Path sourceParallel = Path.of("Photos");
-        try (Stream<Path> stream = Files.list(source)) {
+        try (Stream<Path> stream = Files.list(sourceParallel)) {
             filesParallel = stream.collect(Collectors.toList());
         } catch (IOException ex) {
             ex.printStackTrace();
         }
 
         //System.out.println(Runtime.getRuntime().availableProcessors());
-        ForkJoinPool own = new ForkJoinPool(6000);
+        ForkJoinPool own = new ForkJoinPool(6);
 
-        Stream<Path> pathStreamParalel = filesParallel.stream().parallel();
+        //Stream<Path> pathStreamParalel = filesParallel.stream().parallel();
         try {
-            own.submit(() -> pathStreamParalel.map(path ->{
-                String name = path.getFileName().toString();
-                BufferedImage img = null;
-                try {
-                    img = ImageIO.read(path.toFile());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                Pair<String, BufferedImage> pair = Pair.of(name,img);
-                return pair;
-            }).forEach(pair-> {
-                String name = pair.getLeft();
-                BufferedImage img = pair.getRight();
-
-                transformImage(img);
-
-                File output = new File("OutputP\\"+name);
-                try {
-                    ImageIO.write(img, "jpg", output);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            })).get();
+            List<Path> finalFilesParallel = filesParallel;
+            own.submit(() -> finalFilesParallel.stream().parallel()
+                    .map(path -> readImage(path))
+                    .map(pair -> transformImage(pair))
+                    .forEach(pair-> saveImage(pair, "OutputP") )).get();
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
@@ -118,7 +77,21 @@ public class Main {
 
     }
 
-    public static void transformImage(BufferedImage img){
+    public static Pair<String, BufferedImage> readImage(Path path){
+        String name = path.getFileName().toString();
+        BufferedImage img = null;
+        try {
+            img = ImageIO.read(path.toFile());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Pair<String, BufferedImage> pair = Pair.of(name,img);
+        return pair;
+    }
+
+    public static Pair<String, BufferedImage> transformImage(Pair<String, BufferedImage> pair){
+        BufferedImage img = pair.getRight();
+        String name = pair.getLeft();
         for(int i =0; i < img.getWidth();i++ ){
             for(int j =0; j < img.getHeight(); j++){
                 int rgb = img.getRGB(i, j);
@@ -130,6 +103,20 @@ public class Main {
                 int outRgb = outColor.getRGB();
                 img.setRGB(i,j,outRgb);
             }
+        }
+
+        Pair<String, BufferedImage> result = Pair.of(name, img);
+        return result;
+    }
+
+    public static void saveImage(Pair<String, BufferedImage> pair, String folderName){
+        String name = pair.getLeft();
+        BufferedImage img = pair.getRight();
+        File output = new File(folderName + "\\"+name);
+        try {
+            ImageIO.write(img, "jpg", output);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
