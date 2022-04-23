@@ -1,0 +1,15 @@
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\bin\Debug\net6.0\Lab1.exe
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\bin\Debug\net6.0\Lab1.deps.json
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\bin\Debug\net6.0\Lab1.runtimeconfig.json
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\bin\Debug\net6.0\Lab1.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\bin\Debug\net6.0\Lab1.pdb
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\Lab1.csproj.AssemblyReference.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\Lab1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\Lab1.AssemblyInfoInputs.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\Lab1.AssemblyInfo.cs
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\Lab1.csproj.CoreCompileInputs.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\Lab1.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\refint\Lab1.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\Lab1.pdb
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\Lab1.genruntimeconfig.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\Lab1\Lab1\obj\Debug\net6.0\ref\Lab1.dll

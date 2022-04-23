@@ -112,7 +112,7 @@ public class Main {
     public static void saveImage(Pair<String, BufferedImage> pair, String folderName){
         String name = pair.getLeft();
         BufferedImage img = pair.getRight();
-        File output = new File(folderName + "\\"+name);
+        File output = new File(folderName + "\\" + name);
         try {
             ImageIO.write(img, "jpg", output);
         } catch (IOException e) {
