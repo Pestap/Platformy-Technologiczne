@@ -1,0 +1,15 @@
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\bin\Debug\net6.0\TestWykład.exe
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\bin\Debug\net6.0\TestWykład.deps.json
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\bin\Debug\net6.0\TestWykład.runtimeconfig.json
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\bin\Debug\net6.0\TestWykład.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\bin\Debug\net6.0\TestWykład.pdb
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\TestWykład.csproj.AssemblyReference.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\TestWykład.GeneratedMSBuildEditorConfig.editorconfig
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\TestWykład.AssemblyInfoInputs.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\TestWykład.AssemblyInfo.cs
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\TestWykład.csproj.CoreCompileInputs.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\TestWykład.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\refint\TestWykład.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\TestWykład.pdb
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\TestWykład.genruntimeconfig.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab7\TestWykład\TestWykład\obj\Debug\net6.0\ref\TestWykład.dll
