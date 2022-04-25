@@ -1,0 +1,27 @@
+﻿<Window x:Class="Lab2NET.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2NET"
+        mc:Ignorable="d"
+        Title="Lab8PT" Height="470" Width="800">
+    <Grid>
+        <ToolBar VerticalAlignment="Top" Grid.ColumnSpan="2" >
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open" Click="openClick"/>
+                    <MenuItem Header="_Exit" Click="exitClick"/>
+                </MenuItem>
+            </Menu>
+        </ToolBar>
+        <TreeView x:Name="treeView" Margin="0,33,0,0" Grid.ColumnSpan="2">
+            
+        </TreeView>
+        <StatusBar DockPanel.Dock ="Bottom" x:Name="statusBar" Margin="5,394,5,0" Height="40">
+            <TextBlock x:Name="StatusBarTextBlock" TextWrapping="Wrap" Text="TextBlock"/>
+        </StatusBar>
+        <ScrollViewer x:Name="scrollViewer" Margin="482,33,0,33" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+
+    </Grid>
+</Window>
