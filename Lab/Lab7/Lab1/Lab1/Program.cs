@@ -8,12 +8,13 @@ namespace lab1
         static void Main(string[] args)
         {
             Console.WriteLine("Folder : " + args[0]);
+            Console.WriteLine();
             string path = args[0];
 
             ProcessDirectory(path,0);
-
+            Console.WriteLine();    
             Console.WriteLine("Oldest file: {0}", (new DirectoryInfo(path)).GetOldestFile());
-
+            Console.WriteLine();    
             Collect(path);
             PrintSerializedCollection();
 

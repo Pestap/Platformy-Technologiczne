@@ -19,7 +19,7 @@
             
         </TreeView>
         <StatusBar DockPanel.Dock ="Bottom" x:Name="statusBar" Margin="5,394,5,0" Height="40">
-            <TextBlock x:Name="StatusBarTextBlock" TextWrapping="Wrap" Text="TextBlock"/>
+            <TextBlock x:Name="StatusBarTextBlock" TextWrapping="Wrap" Text=""/>
         </StatusBar>
         <ScrollViewer x:Name="scrollViewer" Margin="482,33,0,33" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
 
