@@ -1,0 +1,15 @@
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\bin\Debug\net6.0\Lab9.exe
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\bin\Debug\net6.0\Lab9.deps.json
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\bin\Debug\net6.0\Lab9.runtimeconfig.json
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\bin\Debug\net6.0\Lab9.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\bin\Debug\net6.0\Lab9.pdb
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\Lab9.csproj.AssemblyReference.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\Lab9.GeneratedMSBuildEditorConfig.editorconfig
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\Lab9.AssemblyInfoInputs.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\Lab9.AssemblyInfo.cs
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\Lab9.csproj.CoreCompileInputs.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\Lab9.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\refint\Lab9.dll
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\Lab9.pdb
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\Lab9.genruntimeconfig.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab9\Lab9\obj\Debug\net6.0\ref\Lab9.dll

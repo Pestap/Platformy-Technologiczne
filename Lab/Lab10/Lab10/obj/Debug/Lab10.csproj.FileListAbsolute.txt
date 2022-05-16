@@ -1,0 +1,16 @@
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10.csproj.AssemblyReference.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10.csproj.SuggestedBindingRedirects.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\MainWindow.g.cs
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\App.g.cs
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10_MarkupCompile.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10_MarkupCompile.lref
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\bin\Debug\Lab10.exe.config
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\bin\Debug\Lab10.exe
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\bin\Debug\Lab10.pdb
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\MainWindow.baml
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10.g.resources
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10.Properties.Resources.resources
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10.csproj.GenerateResource.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10.csproj.CoreCompileInputs.cache
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10.exe
+D:\Piotrek\Studia\Semestr 4\Platfromy-Technologiczne\Lab\Lab10\Lab10\obj\Debug\Lab10.pdb
