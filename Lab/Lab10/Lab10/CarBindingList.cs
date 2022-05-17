@@ -129,7 +129,7 @@ namespace laboratorium_10
             }
             else
             {
-                throw new NotSupportedException($"Cannot sort by {prop.Name}, this property doesn\'t exist.");
+                throw new NotSupportedException($"No property: {prop.Name}");
             }
         }
 

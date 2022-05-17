@@ -177,7 +177,7 @@ namespace Lab10
 
             //Wynik wszukiwania
             List<Car> resultListOfCars;
-            Int32 tmp;
+            Int32 value;
             if (!searchTextBox.Text.Equals(""))
             {
                 //odczyt wartości po ktroej bedziemy szukac
@@ -186,9 +186,9 @@ namespace Lab10
 
 
                 //Szukamy
-                if (Int32.TryParse(searchTextBox.Text, out tmp))
+                if (Int32.TryParse(searchTextBox.Text, out value))
                 {
-                    resultListOfCars = myCarBindingList.FindCars(property, tmp);
+                    resultListOfCars = myCarBindingList.FindCars(property, value);
                 }
                 else
                 {
@@ -246,7 +246,7 @@ namespace Lab10
         private void ButtonDeleteRow(object sender, RoutedEventArgs e)
         {
             for (var vis = sender as Visual; vis != null; vis = VisualTreeHelper.GetParent(vis) as Visual)
-                if (vis is DataGridRow)
+                if (vis is DataGridRow && ((DataGridRow)vis).Item is Car)
                 {
                     //pobieramy dane z wiersza
                     var row = (DataGridRow)vis;

@@ -28,7 +28,7 @@ namespace Lab10
         }
         public override string ToString()
         {
-            return $"{model}, {displacement}l, {horsePower} HP";
+            return $"{model} {displacement} ({horsePower} hp)";
         }
 
         public int CompareTo(object obj)

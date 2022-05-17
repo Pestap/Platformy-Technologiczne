@@ -51,7 +51,7 @@
             <ComboBox Height="25" Margin="0" VerticalAlignment="Top" Width="120" Name="comboBox"/>
             <Button Content="Search" Height="25" VerticalAlignment="Top" Width="75" Click="ButtonSearch"/>
             <Button Content="Save" Height="25" VerticalAlignment="Top" Width="75" HorizontalAlignment="Right" Click="ButtonSave"/>
-            <Button Content="Reload" Height="25" VerticalAlignment="Top" Width="75" HorizontalAlignment="Right" Click="ButtonReload"/>
+            <Button Content="Default" Height="25" VerticalAlignment="Top" Width="75" HorizontalAlignment="Right" Click="ButtonReload"/>
         </ToolBar>
     </Grid>
 </Window>
