@@ -1,0 +1,15 @@
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\bin\Debug\laboratorium_11.exe.config
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\bin\Debug\laboratorium_11.exe
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\bin\Debug\laboratorium_11.pdb
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11.csproj.AssemblyReference.cache
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11.csproj.SuggestedBindingRedirects.cache
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\MainWindow.baml
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\MainWindow.g.cs
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\App.g.cs
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11_MarkupCompile.cache
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11.g.resources
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11.Properties.Resources.resources
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11.csproj.GenerateResource.cache
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11.csproj.CoreCompileInputs.cache
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11.exe
+D:\Piotrek\Studia\Semestr 4\Platformy-Technologiczne\Lab\Lab11\laboratorium_11\obj\Debug\laboratorium_11.pdb
